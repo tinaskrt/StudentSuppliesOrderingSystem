@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Digital Receipt | Campus Essentials</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/receipt.css">
+
+    <script src="../js/receipt.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header no-print">
+        <div class="container header-content">
+            <a href="products.html" class="brand">
+                <div class="brand-icon">✏️</div>
+                <div>
+                    <div class="brand-name">Campus Essentials</div>
+                    <div class="brand-subtitle">Your campus supply shop</div>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <main class="container receipt-main">
+
+        <!-- Receipt is displayed here -->
+        <section id="receipt-container" class="receipt-card">
+
+            <div class="receipt-success">
+                <div class="success-icon">✓</div>
+                <h1>Payment successful!</h1>
+                <p>Your transaction has been completed.</p>
+            </div>
+
+            <div class="receipt-store">
+                <h2>Campus Essentials</h2>
+                <p>Student Supplies Ordering System</p>
+                <p>Digital Payment Receipt</p>
+            </div>
+
+            <div class="receipt-meta">
+                <div>
+                    <span>Reference number</span>
+                    <strong id="receipt-reference">—</strong>
+                </div>
+
+                <div>
+                    <span>Date and time</span>
+                    <strong id="receipt-date">—</strong>
+                </div>
+            </div>
+
+            <div class="receipt-table-wrapper">
+                <table class="receipt-table">
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Qty</th>
+                            <th>Unit price</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="receipt-items"></tbody>
+                </table>
+            </div>
+
+            <div class="receipt-totals">
+                <div>
+                    <span>Total amount due</span>
+                    <strong id="receipt-total">₱0.00</strong>
+                </div>
+
+                <div>
+                    <span>Amount paid</span>
+                    <strong id="receipt-paid">₱0.00</strong>
+                </div>
+
+                <div class="change-row">
+                    <span>Change</span>
+                    <strong id="receipt-change">₱0.00</strong>
+                </div>
+            </div>
+
+            <div class="receipt-confirmation">
+                <strong id="receipt-message">
+                    Payment confirmed successfully!
+                </strong>
+                <p>Thank you for shopping with us!</p>
+            </div>
+
+        </section>
+
+        <div id="no-receipt" class="no-receipt" hidden>
+            <h2>No receipt available</h2>
+            <p>Please complete a successful payment first.</p>
+            <a href="products.html" class="primary-button">
+                Start Shopping
+            </a>
+        </div>
+
+        <div class="receipt-actions no-print">
+            <button type="button" id="print-receipt"
+                    class="secondary-button">
+                Print Receipt
+            </button>
+
+            <button type="button" id="new-transaction"
+                    class="primary-button">
+                New Transaction
+            </button>
+        </div>
+
+    </main>
+
+    <footer class="site-footer no-print">
+        <div class="container">
+            Campus Essentials · School supplies made simple
+        </div>
+    </footer>
+
+</body>
+</html>

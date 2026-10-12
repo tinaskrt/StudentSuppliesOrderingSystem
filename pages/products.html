@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>School Supplies | Campus Essentials</title>
+
+    <!-- Shared design -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Products page design -->
+    <link rel="stylesheet" href="../css/products.css">
+
+    <!-- Products page functionality -->
+    <script src="../js/products.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="../index.html" class="brand">
+                <div class="brand-icon">✏️</div>
+
+                <div>
+                    <div class="brand-name">Campus Essentials</div>
+                    <div class="brand-subtitle">Your campus supply shop</div>
+                </div>
+            </a>
+
+            
+<a href="cart.html" class="cart-counter">
+    🛒 Cart
+    <span id="cart-count">0</span>
+</a>
+
+
+        </div>
+    </header>
+
+
+    <main class="container products-main">
+
+        <!-- Page introduction -->
+        <section class="page-intro">
+            <p class="eyebrow">BACK TO SCHOOL, MADE SIMPLE</p>
+
+            <h1>School supplies for every day.</h1>
+
+            <p class="intro-description">
+                Find your classroom essentials in one place.
+                Choose your supplies and add them to your cart.
+            </p>
+        </section>
+        <div id="cart-message" class="cart-notification"
+             role="status" aria-live="polite" hidden></div>
+        <!-- Products heading -->
+        <section class="products-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Available supplies</h2>
+                    <p>Everything you need for class.</p>
+                </div>
+
+                <span class="product-count">6 products</span>
+            </div>
+
+            <!-- JavaScript will display the products here -->
+            <div id="product-list" class="product-grid"></div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            Campus Essentials · School supplies made simple
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cash Payment | Campus Essentials</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/payment.css">
+
+    <script src="../js/payment.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="products.html" class="brand">
+                <div class="brand-icon">✏️</div>
+                <div>
+                    <div class="brand-name">Campus Essentials</div>
+                    <div class="brand-subtitle">Your campus supply shop</div>
+                </div>
+            </a>
+
+            <a href="cart.html" class="back-link">← Back to Cart</a>
+        </div>
+    </header>
+
+    <main class="container payment-main">
+
+        <section class="payment-intro">
+            <p class="eyebrow">FINAL STEP</p>
+            <h1>Cash payment</h1>
+            <p>Enter the cash amount received from the customer.</p>
+        </section>
+
+        <div class="payment-layout">
+
+            <section class="payment-panel">
+                <h2>Payment details</h2>
+
+                <div class="amount-due">
+                    <span>Total amount due</span>
+                    <strong id="payment-total">₱0.00</strong>
+                </div>
+
+                <form id="payment-form" novalidate>
+
+                    <label for="amount-paid">
+                        Amount paid (₱)
+                    </label>
+
+                    <input
+                        type="number"
+                        id="amount-paid"
+                        name="amountPaid"
+                        placeholder="Enter cash amount"
+                        step="any"
+                        inputmode="decimal"
+                        autocomplete="off"
+                        aria-describedby="payment-error">
+
+                    <p id="payment-error"
+                       class="payment-error"
+                       role="alert"
+                       aria-live="polite"></p>
+
+                    <button type="submit"
+                            id="confirm-payment"
+                            class="primary-button payment-button">
+                        Confirm Payment
+                    </button>
+
+                </form>
+
+                <a href="cart.html" class="continue-link">
+                    Review your cart
+                </a>
+            </section>
+
+            <aside class="payment-help">
+                <div class="help-icon">💵</div>
+                <h2>Payment reminder</h2>
+                <p>
+                    The amount paid must be equal to or greater than
+                    the total amount due.
+                </p>
+                <p>
+                    If the customer pays more than the total, the
+                    remaining amount will be returned as change.
+                </p>
+            </aside>
+
+        </div>
+
+        <p id="payment-status" role="status" aria-live="polite"></p>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            Campus Essentials · School supplies made simple
+        </div>
+    </footer>
+
+</body>
+</html>

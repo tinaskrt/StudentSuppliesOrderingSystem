@@ -1,0 +1,132 @@
+
+/* ==================================
+   STUDENT SUPPLIES ORDERING SYSTEM
+   Shared design for every page
+================================== */
+
+:root {
+    --color-background: #F6F7F2;
+    --color-surface: #FFFFFF;
+    --color-primary: #315C45;
+    --color-primary-hover: #244633;
+    --color-sage: #DCE9DF;
+    --color-text: #27352D;
+    --color-muted: #718075;
+    --color-border: #E1E7DF;
+    --color-success: #28784A;
+
+    --font-main: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+    --radius-card: 18px;
+    --radius-button: 12px;
+
+    --shadow-card: 0 6px 24px rgba(39, 53, 45, 0.06);
+}
+
+/* Reset browser defaults */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-main);
+    background: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #8AB89A;
+    outline-offset: 3px;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.site-header {
+    background: var(--color-surface);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header-content {
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--color-sage);
+    border-radius: 14px;
+    font-size: 23px;
+}
+
+.brand-name {
+    font-size: 19px;
+    font-weight: 750;
+    letter-spacing: -0.5px;
+}
+
+.brand-subtitle {
+    font-size: 12px;
+    color: var(--color-muted);
+}
+
+.primary-button {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-button);
+    padding: 11px 16px;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.primary-button:hover {
+    background: var(--color-primary-hover);
+}
+
+.primary-button:active {
+    transform: scale(0.98);
+}
+
+.site-footer {
+    padding: 28px 0;
+    text-align: center;
+    color: var(--color-muted);
+    font-size: 13px;
+}

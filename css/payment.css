@@ -1,0 +1,151 @@
+
+/* ==================================
+   CASH PAYMENT PAGE
+================================== */
+
+.payment-main {
+    padding-top: 44px;
+    padding-bottom: 60px;
+}
+
+.payment-intro {
+    margin-bottom: 30px;
+}
+
+.payment-intro h1 {
+    font-size: clamp(30px, 4vw, 42px);
+    letter-spacing: -1.2px;
+    margin-bottom: 10px;
+}
+
+.payment-intro > p:last-child {
+    color: var(--color-muted);
+}
+
+.payment-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(240px, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.payment-panel,
+.payment-help {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-card);
+    padding: 26px;
+    box-shadow: var(--shadow-card);
+}
+
+.payment-panel h2,
+.payment-help h2 {
+    font-size: 20px;
+    margin-bottom: 22px;
+}
+
+.amount-due {
+    background: var(--color-sage);
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.amount-due span {
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.amount-due strong {
+    color: var(--color-primary);
+    font-size: 32px;
+    letter-spacing: -0.8px;
+}
+
+#payment-form label {
+    display: block;
+    font-weight: 650;
+    font-size: 14px;
+    margin-bottom: 9px;
+}
+
+#amount-paid {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    background: white;
+    color: var(--color-text);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#amount-paid:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(49, 92, 69, 0.12);
+}
+
+.payment-error {
+    color: #B54747;
+    font-size: 13px;
+    margin-top: 8px;
+    min-height: 20px;
+}
+
+.payment-button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.payment-help {
+    background: #F0F5EF;
+}
+
+.help-icon {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.payment-help h2 {
+    margin-bottom: 12px;
+}
+
+.payment-help p {
+    color: var(--color-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.continue-link {
+    display: block;
+    text-align: center;
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+#payment-status {
+    margin-top: 14px;
+    color: var(--color-success);
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    .payment-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-main {
+        padding-top: 30px;
+    }
+
+    .payment-panel,
+    .payment-help {
+        padding: 20px;
+    }
+}

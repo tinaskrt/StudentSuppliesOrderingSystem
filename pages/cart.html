@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Cart | Campus Essentials</title>
+
+    <!-- Shared design -->
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Cart page design -->
+    <link rel="stylesheet" href="../css/cart.css">
+
+    <!-- Cart functionality -->
+    <script src="../js/cart.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-content">
+
+            <a href="products.html" class="brand">
+                <div class="brand-icon">✏️</div>
+
+                <div>
+                    <div class="brand-name">Campus Essentials</div>
+                    <div class="brand-subtitle">Your campus supply shop</div>
+                </div>
+            </a>
+
+            <a href="products.html" class="back-link">
+                ← Continue Shopping
+            </a>
+
+        </div>
+    </header>
+
+    <main class="container cart-main">
+
+        <!-- Page heading -->
+        <section class="cart-intro">
+            <p class="eyebrow">YOUR ORDER</p>
+            <h1>Shopping cart</h1>
+            <p>Review your supplies before checking out.</p>
+        </section>
+
+        <div class="cart-layout">
+
+            <!-- Selected products -->
+            <section class="cart-panel">
+                <div class="cart-panel-heading">
+                    <h2>Your items</h2>
+                    <span id="cart-item-count">0 items</span>
+                </div>
+
+                <!-- JavaScript displays the cart items here -->
+                <div id="cart-items"></div>
+
+                <div id="empty-cart" class="empty-cart" hidden>
+                    <div class="empty-cart-icon">🛒</div>
+                    <h3>Your cart is empty</h3>
+                    <p>Add some school supplies to get started.</p>
+
+                    <a href="products.html" class="primary-button">
+                        Browse Supplies
+                    </a>
+                </div>
+            </section>
+
+            <!-- Order summary -->
+            <aside class="summary-panel">
+                <h2>Order summary</h2>
+
+                <div class="summary-row">
+                    <span>Total items</span>
+                    <span id="summary-quantity">0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">₱0.00</span>
+                </div>
+
+                <div class="summary-divider"></div>
+
+                <div class="summary-total-row">
+                    <span>Total</span>
+                    <span id="summary-total">₱0.00</span>
+                </div>
+
+                <p class="summary-note">
+                    Your total updates automatically when you change
+                    your cart.
+                </p>
+
+                <!-- Checkout will be connected in a later step -->
+                <button
+    type="button"
+    id="checkout-button"
+    class="primary-button checkout-button"
+    disabled>
+    Proceed to Checkout
+</button>
+
+                <a href="products.html" class="continue-link">
+                    Continue shopping
+                </a>
+            </aside>
+
+        </div>
+
+        <!-- Accessible message for cart updates -->
+        <p id="cart-status" class="cart-status"
+           role="status" aria-live="polite"></p>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            Campus Essentials · School supplies made simple
+        </div>
+    </footer>
+
+</body>
+</html>
